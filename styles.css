@@ -1,0 +1,86 @@
+/* Dropdown arrow styling */
+.nav-arrow {
+  color: white;
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+/* Hero background image */
+
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.hero-section p {
+  font-family: 'Montserrat', sans-serif;
+  color: #e6e6e6;  /* or white */
+  font-size: 20px;
+}
+
+body {
+  background-image: url('4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional: nice parallax effect */
+}
+.navbar-custom {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  position: absolute;      /* sits on top of the image */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;             /* keeps navbar above the background */
+}
+.navbar .nav-link {
+  color: white !important;
+}
+.nav-font {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.3rem; /* spacing like your image */
+  font-size: 14px;
+  color: white;
+}
+.title-font {
+  font-family: 'Calistoga', serif;
+  font-weight: 900;  /* same as screenshot - heavy/bold */
+  font-size: 36px;   /* adjust as per your design */
+  letter-spacing: 0.05rem;
+  color: white;
+}
+
+.title-font-1 {
+  font-family: 'Courier prime', serif;
+  font-weight: 50;  /* same as screenshot - heavy/bold */
+  font-size: 16.7px;   /* adjust as per your design */
+  letter-spacing: 0.05rem;
+  color: white;
+}
+.navbar-custom .navbar-toggler {
+  border-color: white; /* white border */
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Mobile dropdown background */
+@media (max-width: 991px) {
+  .navbar-custom .navbar-collapse {
+    background: rgba(17, 44, 79, 0.85);  /* your old blue, slightly transparent */
+    backdrop-filter: blur(4px);          /* optional for nicer look */
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .navbar-custom .nav-link {
+    color: white !important;
+  }
+}
+
+
+
+
+
