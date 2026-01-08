@@ -12,71 +12,76 @@
     rel="stylesheet"
   />
 
-  <!-- Your Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
- 
 
-
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-custom py-3">
-
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Menu -->
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav navbar nav-link nav-font gap-4">
-          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+        <ul class="navbar-nav nav-font gap-4">
 
-          <li class="nav-item d-flex align-items-center">
-            <a class="nav-link" href="#">CLIENTS</a>
-            <span class="nav-arrow">▼</span>
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">SERVICES</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
+          </li>
+
           <!-- CLIENTS DROPDOWN -->
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button">
-      CLIENTS
-    </a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Clients</a></li>
-      <li><a class="dropdown-item" href="#">Case Studies</a></li>
-    </ul>
-  </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              CLIENTS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Clients</a></li>
+              <li><a class="dropdown-item" href="#">Case Studies</a></li>
+            </ul>
+          </li>
 
-          <li class="nav-item d-flex align-items-center">
-            <a class="nav-link" href="#">OUR TEAM</a>
-            <span class="nav-arrow">▼</span>
-        </li>
-           <!-- OUR TEAM DROPDOWN -->
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button">
-      OUR TEAM
-    </a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Approach</a></li>
-      <li><a class="dropdown-item" href="#">People</a></li>
-    </ul>
-  </li>
+          <!-- OUR TEAM DROPDOWN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              OUR TEAM
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Approach</a></li>
+              <li><a class="dropdown-item" href="#">People</a></li>
+            </ul>
+          </li>
 
-          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
-  <header class="hero-section d-flex align-items-center">
+  <header class="hero-section">
     <div class="container text-white">
-      <h1 class="display-4 fw-bold title-font">VP Informatics, Inc.</h1>
+      <h1 class="title-font">VP Informatics, Inc.</h1>
       <p class="lead">Unlocking the Power of Science: Where Data Management Meets Innovation</p>
     </div>
   </header>
