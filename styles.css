@@ -65,6 +65,54 @@ body {
 .navbar-custom .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
+.navbar-custom .nav-link {
+  position: relative;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #00bcd4;
+}
+
+/* underline animation */
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00bcd4;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+/* Show dropdown on hover */
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+.dropdown-menu {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
 
 /* Mobile dropdown background */
 @media (max-width: 991px) {
