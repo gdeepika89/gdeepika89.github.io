@@ -1,134 +1,130 @@
-/* Dropdown arrow styling */
-.nav-arrow {
-  color: white;
-  font-size: 0.75rem;
-  margin-left: 4px;
-}
-
-/* Hero background image */
-
-.hero-section {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-}
-.hero-section p {
-  font-family: 'Montserrat', sans-serif;
-  color: #e6e6e6;  /* or white */
-  font-size: 20px;
-}
-
+/* =========================
+   GLOBAL BACKGROUND
+========================= */
 body {
   background-image: url('4.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* optional: nice parallax effect */
+  background-attachment: fixed;
+  margin: 0;
 }
+
+/* =========================
+   NAVBAR
+========================= */
 .navbar-custom {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  position: absolute;      /* sits on top of the image */
-  width: 100%;
+  position: absolute;
   top: 0;
-  left: 0;
-  z-index: 10;             /* keeps navbar above the background */
+  width: 100%;
+  background: transparent !important;
+  z-index: 1000;
 }
-.navbar .nav-link {
-  color: white !important;
-}
+
 .nav-font {
   font-family: 'Merriweather', serif;
-  letter-spacing: 0.3rem; /* spacing like your image */
   font-size: 14px;
-  color: white;
-}
-.title-font {
-  font-family: 'Calistoga', serif;
-  font-weight: 900;  /* same as screenshot - heavy/bold */
-  font-size: 36px;   /* adjust as per your design */
-  letter-spacing: 0.05rem;
-  color: white;
+  letter-spacing: 0.3rem;
 }
 
-.title-font-1 {
-  font-family: 'Courier prime', serif;
-  font-weight: 50;  /* same as screenshot - heavy/bold */
-  font-size: 16.7px;   /* adjust as per your design */
-  letter-spacing: 0.05rem;
-  color: white;
-}
-.navbar-custom .navbar-toggler {
-  border-color: white; /* white border */
-}
-
-.navbar-custom .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-}
+/* NAV LINKS */
 .navbar-custom .nav-link {
+  color: white !important;
   position: relative;
-  color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  padding-bottom: 6px;
   transition: color 0.3s ease;
 }
 
 .navbar-custom .nav-link:hover {
-  color: #00bcd4;
+  color: #00bcd4 !important;
 }
 
-/* underline animation */
+/* UNDERLINE HOVER EFFECT */
 .navbar-custom .nav-link::after {
   content: "";
   position: absolute;
+  left: 0;
+  bottom: 0;
   width: 0;
   height: 2px;
   background-color: #00bcd4;
-  left: 0;
-  bottom: -5px;
   transition: width 0.3s ease;
 }
 
 .navbar-custom .nav-link:hover::after {
   width: 100%;
 }
-/* Show dropdown on hover */
-.navbar .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-}
+
+/* =========================
+   DROPDOWN
+========================= */
 .dropdown-menu {
-  border-radius: 8px;
+  background-color: #111;
   border: none;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 8px 0;
 }
 
 .dropdown-item {
-  padding: 10px 20px;
+  color: white;
   font-weight: 500;
+  padding: 10px 20px;
 }
 
 .dropdown-item:hover {
   background-color: #00bcd4;
-  color: #fff;
+  color: white;
 }
 
-
-/* Mobile dropdown background */
-@media (max-width: 991px) {
-  .navbar-custom .navbar-collapse {
-    background: rgba(17, 44, 79, 0.85);  /* your old blue, slightly transparent */
-    backdrop-filter: blur(4px);          /* optional for nicer look */
-    padding: 15px;
-    border-radius: 8px;
-  }
-
-  .navbar-custom .nav-link {
-    color: white !important;
+/* Hover open dropdown (desktop) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
   }
 }
 
+/* Dropdown arrow color */
+.dropdown-toggle::after {
+  border-top-color: white;
+}
 
+.dropdown-toggle:hover::after {
+  border-top-color: #00bcd4;
+}
 
+/* =========================
+   HERO SECTION
+========================= */
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
 
+.hero-section p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #e6e6e6;
+}
 
+/* =========================
+   FONTS
+========================= */
+.title-font {
+  font-family: 'Calistoga', serif;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+}
+
+/* =========================
+   MOBILE TOGGLER
+========================= */
+.navbar-custom .navbar-toggler {
+  border-color: white;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
