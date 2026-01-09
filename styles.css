@@ -6,9 +6,10 @@
 }
 /* Keep navbar items in one row */
 .navbar-nav {
-  display: flex;
+  flex-direction: row;
   align-items: center;
 }
+
 
 /* Remove Bootstrap default caret */
 .dropdown-toggle::after {
@@ -115,13 +116,12 @@ body {
 }
 .navbar-custom .nav-link {
  position: relative;
-  display: inline-flex;   /* ✅ inline-flex instead of inline-block */
+  display: inline-flex;   /* SAFE with Bootstrap */
   align-items: center;
-  padding-bottom: 6px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 500;
   letter-spacing: 0.5px;
-  transition: color 0.3s ease;
+  white-space: nowrap;    /* prevents wrapping */
 }
 
 .navbar-custom .nav-link:hover {
