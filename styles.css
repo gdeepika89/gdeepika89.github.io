@@ -4,6 +4,47 @@
   font-size: 0.75rem;
   margin-left: 4px;
 }
+/* Remove Bootstrap default caret */
+.dropdown-toggle::after {
+  display: none !important;
+}
+/* Position link content inline */
+.dropdown-toggle-custom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* Default DOWN arrow (sharp triangle) */
+.custom-arrow {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid black;
+  transition: transform 0.2s ease;
+}
+.nav-item.dropdown:hover .custom-arrow {
+  transform: rotate(180deg);
+}
+.nav-item.dropdown.show .custom-arrow {
+  transform: rotate(180deg);
+}
+.dropdown-menu {
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
 
 /* Hero background image */
 
@@ -122,6 +163,12 @@ body {
     padding: 15px;
     border-radius: 8px;
   }
+  @media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
 
   .navbar-custom .nav-link {
     color: white !important;
