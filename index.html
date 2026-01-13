@@ -5,79 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>VP Informatics</title>
-
+  
   <!-- Bootstrap CSS -->
+  
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Your Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
- 
+
+ <!-- Your Custom CSS -->
+ <link rel="stylesheet" href="styles.css" />
 
 
 </head>
 
-<body>
+<body  class="home-page d-flex flex-column min-vh-100">
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-custom py-3">
 
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+  <!-- LOGO (LEFT) -->
+    <a class="navbar-brand me-4 logo-animate" href="#">
+      <img src="VPI Logo White.png" alt="VP Informatics" height="70">
+    </a>
+
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
         data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+	  <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
+    <ul class="navbar-nav mx-auto gap-4">
+      <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="Services.html">SERVICES</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+	  <!-- CLIENTS DROPDOWN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">
+        CLIENTS 
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Clients</a></li>
+        <li><a class="dropdown-item" href="#">Case Studies</a></li>
+      </ul>
+    </li>
 
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-       <ul class="navbar-nav nav-font gap-4">
-
-          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
- 
-         
-          <!-- CLIENTS DROPDOWN -->
-  <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle-custom" href="#" role="button">
-    CLIENTS
-   
-  </a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Clients</a></li>
-    <li><a class="dropdown-item" href="#">Case Studies</a></li>
-  </ul>
-</li>
- 
-           <!-- OUR TEAM DROPDOWN -->
-  <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle-custom" href="#" role="button">
-    OUR TEAM
-    
-  </a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Approach</a></li>
-    <li><a class="dropdown-item" href="#">People</a></li>
-  </ul>
-</li>
-          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
-        </ul>
-      </div>
-    </div>
+    <!-- OUR TEAM DROPDOWN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">
+        OUR TEAM 
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Approach</a></li>
+        <li><a class="dropdown-item" href="#">People</a></li>
+      </ul>
+    </li>
+      <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+    </ul>
+	</div>
+	</div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="hero-section d-flex align-items-center">
-    <div class="container text-white">
-      <h1 class="display-4 fw-bold title-font">VP Informatics, Inc.</h1>
-      <p class="lead">Unlocking the Power of Science: Where Data Management Meets Innovation</p>
+  <!-- HERO SECTION - plain HTML -->
+  <main class="flex-fill pt-4 d-flex align-items-center">
+<div class="container  text-white hero-animate">
+  <h1 class="display-4 fw-bold hero-text">VP Informatics, Inc.</h1>
+  <p>Unlocking the Power of Science: Where Data Management Meets Innovation</p>
+</div>
+
+
+</main>
+<footer class="footer-contact">
+  <div class="container py-4">
+
+    <div class="d-flex flex-column flex-md-row 
+                justify-content-between align-items-center gap-3 text-white">
+
+      <!-- LEFT: COPYRIGHT -->
+      <div class="footer-left">
+        <p class="mb-0">© 2026 VP Informatics, Inc. All rights reserved.</p>
+      </div>
+
+      <!-- RIGHT: CONTACT + SOCIAL -->
+      <div class="footer-right d-flex align-items-center gap-4">
+
+        <!-- EMAIL -->
+        <a href="mailto:info@vpinformatics.com" class="text-white text-decoration-none">
+          <i class="bi bi-envelope-fill me-2"></i>
+          info@vpinformatics.com
+        </a>
+
+        <!-- SOCIAL ICONS -->
+        <a href="#" class="text-white fs-6">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <a href="#" class="text-white fs-5">
+          <i class="bi bi-linkedin"></i>
+        </a>
+
+      </div>
+
     </div>
-  </header>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+</footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
