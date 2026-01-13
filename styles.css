@@ -1,208 +1,231 @@
-/* Dropdown arrow styling */
-.nav-arrow {
-  color: white;
-  font-size: 0.75rem;
-  margin-left: 4px;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* Keep navbar items in one row */
-.navbar-nav {
-  flex-direction: row;
-  align-items: center;
-}
-
-
-/* Remove Bootstrap default caret */
-.dropdown-toggle::after {
-  display: none !important;
-}
-/* Position link content inline */
-.dropdown-toggle-custom {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-/* Default DOWN arrow (sharp triangle) */
-.custom-arrow {
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
- border-top: 6px solid white;
-
-  transition: transform 0.2s ease;
-}
-.nav-item.dropdown:hover .custom-arrow {
-  transform: rotate(180deg);
-}
-.nav-item.dropdown.show .custom-arrow {
-  transform: rotate(180deg);
-}
-.dropdown-menu {
-  background-color: white;
-  border: none;
-  border-radius: 0;
-  margin-top: 10px;
-}
-
-.dropdown-item {
-  font-family: 'Merriweather', serif;
-  letter-spacing: 0.1rem;
-}
-
-.dropdown-item:hover {
-  background-color: #f2f2f2;
-}
-
-
-/* Hero background image */
-
-.hero-section {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-}
-.hero-section p {
-  font-family: 'Montserrat', sans-serif;
-  color: #e6e6e6;  /* or white */
-  font-size: 20px;
-}
-
+/* PAGE BACKGROUND */
 body {
-  background-image: url('4.png');
+  min-height: 100vh;
+  font-family: 'Merriweather', serif;
+}
+
+/* Background only for HOME */
+.home-page {
+  background-image: url('2.png');
   background-size: cover;
+  
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* optional: nice parallax effect */
 }
-.navbar-custom {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  position: absolute;      /* sits on top of the image */
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;             /* keeps navbar above the background */
+
+.navbar
+{
+	/*background-color:rgba(17, 45, 81);*/
+	background-color:rgba(27, 53, 89,0.9);
 }
-.navbar .nav-link {
-  color: white !important;
-}
-.nav-font {
-  font-family: 'Merriweather', serif;
-  letter-spacing: 0.3rem; /* spacing like your image */
+
+
+.navbar-nav .nav-link {
+  letter-spacing: 0.25rem;
   font-size: 14px;
-  color: white;
-}
-.title-font {
-  font-family: 'Calistoga', serif;
-  font-weight: 900;  /* same as screenshot - heavy/bold */
-  font-size: 36px;   /* adjust as per your design */
-  letter-spacing: 0.05rem;
-  color: white;
+  font-family: 'Merriweather', serif;
 }
 
-.title-font-1 {
-  font-family: 'Courier prime', serif;
-  font-weight: 50;  /* same as screenshot - heavy/bold */
-  font-size: 16.7px;   /* adjust as per your design */
-  letter-spacing: 0.05rem;
-  color: white;
-}
-.navbar-custom .navbar-toggler {
-  border-color: white; /* white border */
-}
-
-.navbar-custom .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-}
-.navbar-custom .nav-link {
- position: relative;
-  display: inline-flex;   /* SAFE with Bootstrap */
-  align-items: center;
-  color: #ffffff !important;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  white-space: nowrap;    /* prevents wrapping */
-}
-
-.navbar-custom .nav-link:hover {
-  color: #00bcd4;
-}
-
-/* underline animation */
-/* Animated underline – ONLY under text (not full navbar) */
-.navbar-custom .nav-link {
+/*NAV LINK UNDERLINE EFFECT*/
+.navbar-nav .nav-link {
   position: relative;
-  display: inline-block;   /* THIS is the key fix */
-  padding-bottom: 6px;
-  color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
 }
 
-/* Underline hidden by default */
-.navbar-custom .nav-link::after {
+.navbar-nav .nav-link::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -6px;
   width: 0;
   height: 2px;
-  background-color: rgba(255,255,255,0.6); /* lighter navbar shade */
+  background-color: rgba(255,255,255,0.6);
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
 
-/* Animate underline on hover */
-.navbar-custom .nav-link:hover::after {
+.navbar-nav .nav-link:hover::after {
   width: 100%;
 }
-/* No underline for dropdown parents */
-.nav-item.dropdown > .nav-link::after {
+/*VPINFORMATICS FONT STYLES*/
+.hero-text
+{
+	font-family: 'Calistoga', serif;
+	font-weight: 900;
+	font-size: 40px;
+	letter-spacing: 0.05rem;
+	color: #ddd;
+}
+
+/* DROPDOWN ITEM HOVER PROPERTIES */
+
+.dropdown-menu .dropdown-item
+{
+	font-family: 'Merriweather', serif;  /* same as nav-link */
+  font-size: 14px;                  /* match size */
+  letter-spacing: 0.15rem;
+	color:#2E2E66;
+}
+/*HIDE ARROW COMING AFTER DROPDOWN FOR CLIENT AND OUR TEAM*/
+.dropdown-toggle::after {
   display: none;
 }
 
-/* Show dropdown on hover */
-.navbar .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
+/*TO ADD BACKGROUND COLOR FOR DROPDOWN ITEMS FOR CLIENT AND OUR TEAM*/
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:active,
+.dropdown-menu .dropdown-item:focus-visible {
+  /*background-color: #A9A9C7;*/
+  background-color: #A9A9C7;
+  
+ background-color: rgba(27, 53, 89,0.9);
+  color: #F2F2FA;
 }
-.dropdown-menu {
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/*BOX FOR SERVICES PAGE CONTENT*/
+.content-box {
+  background: rgba(0, 70, 120, 0.25);   /* blue with transparency */
+  padding: 40px;
+  border-radius: 12px;
+  color:#96a3b4;
+  letter-spacing: 0.10rem;
+  backdrop-filter: blur(8px);
+}
+/*ADD FOOTER BACKGROUND*/
+.footer-copyright
+{
+	background-color:rgba(27, 53, 89,0.9);
+	padding: 1rem 0;
+	color: #ddd;
+}
+.footer-contact
+{
+	
+	background-color:rgba(27, 53, 89,0.9);
+	color: #ddd;
+	
+	
+}
+/*ADDING BACKGROUND EFFECTS TO VPINFORMATICS TEXT*/
+.hero-animate {
+  opacity: 0;
+  transform: translateX(-40px);
+  filter: brightness(0.6);
+  animation: slideBright 2.2s ease-out forwards;
+}
+/* Logo animation */
+.logo-animate {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: logoSlideIn 1.2s ease-out forwards;
 }
 
-.dropdown-item {
-  padding: 10px 20px;
-  font-weight: 500;
+/* ===== FOOTER ICON HOVER (FORCE WORK) ===== */
+.footer-contact .footer-right a i {
+  display: inline-block;
+  transition: transform 0.25s ease, text-shadow 0.25s ease;
 }
 
-.dropdown-item:hover {
-  background-color: #00bcd4;
-  color: #fff;
+/* Hover emboss effect */
+.footer-contact .footer-right a:hover i {
+  text-shadow:
+    2px 2px 3px rgba(255,255,255,0.5),
+   -2px -2px 3px rgba(0,0,0,0.7);
+  transform: translateY(1px);
 }
 
 
-/* Mobile dropdown background */
-@media (max-width: 991px) {
-  .navbar-custom .navbar-collapse {
-    background: rgba(17, 44, 79, 0.85);  /* your old blue, slightly transparent */
-    backdrop-filter: blur(4px);          /* optional for nicer look */
-    padding: 15px;
-    border-radius: 8px;
+@keyframes logoSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  @media (min-width: 992px) {
-  .nav-item.dropdown:hover .dropdown-menu {
+}
+
+
+@keyframes slideBright {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+    filter: brightness(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: brightness(1);
+  }
+}
+
+
+/*TO ADD A BACKGROUND TO THE MOBILE NAV MENU ITEMS*/
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    background-color: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  /*TO ADD BACKGROUND TO DROPDOWNS OF CLIENT AND OUR TEAM*/
+  .navbar .dropdown  .dropdown-menu.show {
+   
+	/*background-color:#C8C8E0;*/
+	
+    
+    margin-top: 0;
+  }
+  
+}
+/*MAKE DROPDOWN WORK ON HOVER FOR LARGE SCREENS*/
+@media (min-width: 992px) {
+ /* .navbar .dropdown:hover > .dropdown-menu {
     display: block;
   }
+	/*background-color:#C8C8E0;
+	/*background-color:rgba(0, 70, 120, 0.25);*/
+	/*background-color:#96a3b4*/
+    /*margin-top: 0;
+  }*/
+  /* Position dropdown relative to nav item */
+/* Ensure parent positioning */
+/* Smooth animation */
+  .dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.35s ease;
+}
+/* When hovered */
+.hover-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}*/
+/* Keep dropdown in DOM but hidden */
+.navbar .dropdown-menu {
+  display: block;              /* REQUIRED for animation */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease, 
+              transform 0.35s ease,
+              visibility 0.35s;
+}
+
+/* Show on hover */
+.navbar .dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 }
 
 
-  .navbar-custom .nav-link {
-    color: white !important;
-  }
-}
 
 
 
