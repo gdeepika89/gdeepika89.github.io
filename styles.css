@@ -10,6 +10,31 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+html, body {
+  min-height: 100%;
+  margin: 0;
+}
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+
+
+
+.services-page {
+	
+  background-image: url('Website Main.png');
+  background-size: cover;
+  color: #ddd;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 /* Background only for HOME */
 .home-page {
   background-image: url('2.png');
@@ -18,23 +43,56 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+/*VEDIO BACKGROUND FOR HOME PAGE*/
+.home-page-vedio{
+	background-image: url("2.png"); /* fallback image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+/* Video background */
+.bg-video {
+  position: fixed;          /* important */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;              /* behind all content */
+}
 
 .navbar
 {
 	/*background-color:rgba(17, 45, 81);*/
-	background-color:rgba(27, 53, 89,0.9);
+	/*background-color:rgba(27, 53, 89,0.9);*/
+	/*background-color:rgba(4, 56, 75, 0.9);*/
+	/*background-color: rgba(255, 255, 255, 0.15);*/
+	background-color: rgba(255, 255, 255, 0.85);
+
 }
+nav,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
 
 
 .navbar-nav .nav-link {
   letter-spacing: 0.25rem;
   font-size: 14px;
   font-family: 'Merriweather', serif;
+  color: #04384b;   /* ← change this */
+  font-weight: 600;  
 }
 
 /*NAV LINK UNDERLINE EFFECT*/
 .navbar-nav .nav-link {
   position: relative;
+  
 }
 
 .navbar-nav .nav-link::after {
@@ -44,7 +102,8 @@ body {
   bottom: -6px;
   width: 0;
   height: 2px;
-  background-color: rgba(255,255,255,0.6);
+  /*background-color: rgba(255,255,255,0.6);*/
+  background-color:#2E2E66;
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
@@ -57,9 +116,13 @@ body {
 {
 	font-family: 'Calistoga', serif;
 	font-weight: 900;
-	font-size: 40px;
+	/*font-size: 40px;*/
 	letter-spacing: 0.05rem;
 	color: #ddd;
+	font-size: 2.5rem;          /* adjust heading size */
+  line-height: 1.2;
+  margin-bottom: 1rem;  
+	
 }
 
 /* DROPDOWN ITEM HOVER PROPERTIES */
@@ -81,7 +144,8 @@ body {
 .dropdown-menu .dropdown-item:active,
 .dropdown-menu .dropdown-item:focus-visible {
   /*background-color: #A9A9C7;*/
-  background-color: #A9A9C7;
+ /* background-color: #A9A9C7;*/
+ background-color:#2E2E66;
   
  background-color: rgba(27, 53, 89,0.9);
   color: #F2F2FA;
@@ -98,17 +162,34 @@ body {
 /*ADD FOOTER BACKGROUND*/
 .footer-copyright
 {
-	background-color:rgba(27, 53, 89,0.9);
+	/*background-color:rgba(4, 56, 75, 0.9);*/
+	background-color: rgba(255, 255, 255, 0.85);
 	padding: 1rem 0;
-	color: #ddd;
+	/*color: #ddd;*/
+	color:#2E2E66;
 }
 .footer-contact
 {
 	
-	background-color:rgba(27, 53, 89,0.9);
-	color: #ddd;
+	/*background-color:rgba(4, 56, 75, 0.9);*/
+	background-color: rgba(255, 255, 255, 0.85);
+	color:#2E2E66;
+	position: relative;
+  z-index: 1;
+	
+	/*color: #ddd;*/
+	margin-top: auto;
 	
 	
+	
+}
+.footer-left
+{
+	color:#2E2E66;
+}
+.footer-text
+{
+	color:#2E2E66;
 }
 /*ADDING BACKGROUND EFFECTS TO VPINFORMATICS TEXT*/
 .hero-animate {
@@ -116,7 +197,30 @@ body {
   transform: translateX(-40px);
   filter: brightness(0.6);
   animation: slideBright 2.2s ease-out forwards;
+  display: flex;
+  flex-direction: column;    /* stack h1 and p vertically */
+  justify-content: center;    /* vertical centering inside parent */
+  align-items: center;        /* horizontal centering */
+  text-align: center;         /* center text */
+  min-height: 60vh;           /* take ~60% of viewport height */
+  padding: 2rem;    
 }
+/*SLIDE FROM TOP*/
+.hero-animate-top {
+  opacity: 0;
+  transform: translateY(-40px);   /* slide from top instead of left */
+  filter: brightness(0.6);
+  animation: slideDown 2.2s ease-out forwards;
+
+  display: flex;
+  flex-direction: column;        /* stack h1 and p vertically */
+  justify-content: center;       /* vertical centering */
+  align-items: center;           /* horizontal centering */
+  text-align: center;            /* center text */
+  min-height: 60vh;              /* take ~60% of viewport height */
+  padding: 2rem;
+}
+
 /* Logo animation */
 .logo-animate {
   opacity: 0;
@@ -137,6 +241,69 @@ body {
    -2px -2px 3px rgba(0,0,0,0.7);
   transform: translateY(1px);
 }
+/*CTA LINKS*/
+/* Section wrapper */
+.cta-separator {
+ /* padding: 2.5rem 0 1.5rem;*/
+ 
+}
+.cta-separator {
+  /* margin-top: 1rem;*/
+  margin-bottom: 1rem; /* optional gap from footer */
+}
+
+
+/* Thin horizontal line */
+.cta-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* CTA links */
+.cta-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cta-link:hover {
+  color: #ffffff;
+}
+/*UNDERLINE EFFECT FOR CTA*/
+/* CTA link underline effect */
+.cta-link {
+  position: relative;           /* needed for pseudo-element */
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-decoration: none;        /* remove default underline */
+  transition: color 0.3s ease;
+}
+
+/* Pseudo-element for animated underline */
+.cta-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px;                 /* space below text */
+  width: 0;
+  height: 1px;                  /* thickness of underline */
+  background-color: #ffffff;    /* underline color */
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* On hover, expand underline */
+.cta-link:hover::after {
+  width: 100%;
+}
 
 
 @keyframes logoSlideIn {
@@ -145,6 +312,19 @@ body {
     transform: translateX(0);
   }
 }
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);   /* start above */
+    filter: brightness(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);       /* end at original position */
+    filter: brightness(1);
+  }
+}
+
 
 
 @keyframes slideBright {
