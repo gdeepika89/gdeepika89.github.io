@@ -21,9 +21,13 @@
 
 </head>
 
-<body  class="home-page d-flex flex-column min-vh-100">
+<body  class="home-page-vedio d-flex flex-column min-vh-100">
 
 
+ <video autoplay muted loop playsinline class="bg-video">
+    <source src="12194945_1920_1080_30fps.mp4" type="video/mp4" />
+  </video>
+  <div class="video-overlay"></div>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 <div class="container">
   <!-- LOGO (LEFT) -->
@@ -68,11 +72,48 @@
   </nav>
 
   <!-- HERO SECTION - plain HTML -->
-  <main class="flex-fill pt-4 d-flex align-items-center">
-<div class="container  text-white hero-animate">
+  <main class="flex-fill pt-4 d-flex flex-column">
+<div class="container  text-white hero-animate-top">
   <h1 class="display-4 fw-bold hero-text">VP Informatics, Inc.</h1>
-  <p>Unlocking the Power of Science: Where Data Management Meets Innovation</p>
+  <p>
+    Unlocking the Power of Science: Custom Chemistry & Biology Informatics Solutions.
+  </p>
+  
+  <p>
+    We design, integrate, and support scientific informatics systems that allow researchers to focus on discovery instead of data workflows.
+  </p>
+  
+  <p>
+    From platform customization and system integration to data migration and ongoing support, VPInformatics delivers informatics solutions built around real scientific needs.
+  </p>
 </div>
+<!-- SEPARATOR + CTA LINKS -->
+<SECTION class="cta-separator ">
+  <div class="container">
+
+    <!-- horizontal line -->
+    <div class="cta-divider"></div>
+
+    <!-- links -->
+    <div class="row text-center mt-4">
+
+      <div class="col-md-4 ">
+        <a href="#" class="cta-link">Talk to an Informatics Expert</a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="cta-link">Explore Our Informatics Services</a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="cta-link">See How We Support Scientific Teams</a>
+      </div>
+
+    </div>
+
+  </div>
+</SECTION>
+
 
 
 </main>
@@ -91,17 +132,17 @@
       <div class="footer-right d-flex align-items-center gap-4">
 
         <!-- EMAIL -->
-        <a href="mailto:info@vpinformatics.com" class="text-white text-decoration-none">
+        <a href="mailto:info@vpinformatics.com" class="footer-text text-decoration-none ">
           <i class="bi bi-envelope-fill me-2"></i>
           info@vpinformatics.com
         </a>
 
         <!-- SOCIAL ICONS -->
-        <a href="#" class="text-white fs-6">
+        <a href="#" class="footer-text fs-6">
           <i class="bi bi-twitter-x"></i>
         </a>
 
-        <a href="#" class="text-white fs-5">
+        <a href="#" class="footer-text fs-5">
           <i class="bi bi-linkedin"></i>
         </a>
 
