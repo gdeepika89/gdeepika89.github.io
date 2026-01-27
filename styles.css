@@ -20,7 +20,15 @@ html, body {
   background: rgba(0, 0, 0, 0.45);
   z-index: -1;
 }
-
+.services-bg
+{
+	background:blue;
+	flex: 1;   
+	
+}
+.services-test{
+	background:blue;
+}
 
 
 
@@ -34,8 +42,13 @@ html, body {
   background-repeat: no-repeat;
 }
 
+.services-page1{
+	background-color:white;
+}
+
 
 /* Background only for HOME */
+/*NOT USED ANYWHERE*/
 .home-page {
   background-image: url('2.png');
   background-size: cover;
@@ -50,7 +63,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 /* Video background */
 .bg-video {
@@ -70,6 +83,7 @@ html, body {
 	/*background-color:rgba(4, 56, 75, 0.9);*/
 	/*background-color: rgba(255, 255, 255, 0.15);*/
 	background-color: rgba(255, 255, 255, 0.85);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
 }
 nav,
@@ -179,6 +193,7 @@ footer {
 	
 	/*color: #ddd;*/
 	margin-top: auto;
+	 box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
 	
 	
 	
@@ -243,10 +258,7 @@ footer {
 }
 /*CTA LINKS*/
 /* Section wrapper */
-.cta-separator {
- /* padding: 2.5rem 0 1.5rem;*/
- 
-}
+
 .cta-separator {
   /* margin-top: 1rem;*/
   margin-bottom: 1rem; /* optional gap from footer */
@@ -305,6 +317,169 @@ footer {
   width: 100%;
 }
 
+/*SERVCES PAGE*/
+/* ===== PAGE BANNER ===== */
+/* ===== BANNER SLIDES ===== */
+
+
+
+
+
+
+
+
+/*NEW STYLE SERVICES*/
+.page-banner {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 -80px 120px rgba(0, 0, 0, 0.35);
+}
+
+.banner-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.banner-slide.active {
+  opacity: 1;
+}
+
+/* Make images cover the entire banner */
+.banner-slide img.banner-img {
+  width: 120%;              /* make image wider */
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(15%); /* push image right */
+}
+
+/* Overlay panel */
+.banner-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+
+.banner-overlay h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+
+/*NEW STYLE SERVICES*/
+
+/* Mobile fallback */
+@media (max-width: 768px) {
+  .banner-overlay {
+    width: 100%;
+    clip-path: none;
+    padding: 2.5rem;
+    justify-content: center;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+
+
+.page-content {
+  padding: 4rem 0;
+}
+/*SERVICES PAGE ACCORDION*/
+/* Remove focus border & shadow on accordion button */
+/* Remove focus border & shadow on accordion button */
+.accordion-button.custom-btn:focus { 
+  box-shadow: none; 
+  border: none; 
+}
+
+/* Rounded border for content box */
+.accordion-body.content-box {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #FFB74D;
+  color:white;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+.color-custom-text
+{
+	color:#04384b;
+}
+
+/*SERVICES PARAGRAPH STYLING*/
+.section-description {
+  font-size: 1.15rem;      /* ~18.4px */
+  font-weight: 500;        /* Medium */
+  line-height: 1.7;
+  color: #2f3e46;
+}
+/*SERVICES ACCORDION LINK STYLING*/
+.accordion-link {
+  all: unset;                 /* remove default button styles */
+  cursor: pointer;
+  display: inline-block;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #04384b;
+
+  padding: 0.4rem 0;
+  letter-spacing: 0.02em;
+
+  position: relative;
+  transition: color 0.25s ease;
+}
+.accordion-link .arrow {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-left: 0.25rem;
+}
+
+
+/*SERVICES ACCORDION TEXT STYLING*/
+.content-box ul {
+  list-style: none; /* removes default dots */
+  padding-left: 0;  /* remove left padding */
+  margin-left: 1rem; /* optional: control spacing */
+}
+
+.content-box p,
+.content-box li {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #04384B; /* use white text for FFB74D background */
+}
+
+/* Optional: bullets with contrast */
+.content-box li::before {
+  content: "▸";
+  color: #1B3559; /* dark blue bullet for contrast */
+  font-weight: 700;
+  padding-right: 0.3rem;
+}
+
 
 @keyframes logoSlideIn {
   to {
@@ -339,16 +514,32 @@ footer {
     filter: brightness(1);
   }
 }
+/*MEDIA QUERY FOR SERVICES PAGE  BANNER FOR MOBILE*/
+@media (max-width: 768px) {
+  .banner-overlay {
+    width: 100%;
+    clip-path: none;
+    padding: 2.5rem;
+    justify-content: center;
+  }
 
+  .banner-overlay h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
 
 /*TO ADD A BACKGROUND TO THE MOBILE NAV MENU ITEMS*/
 @media (max-width: 991.98px) {
   .navbar-collapse.show {
-    background-color: rgba(255, 255, 255, 0.18);
+    /*background-color: rgba(255, 255, 255, 0.18);*/
+	/*background-color: #04384b; */
+	background-color: rgba(4, 56, 75, 0.2);
     backdrop-filter: blur(8px);
     border-radius: 8px;
     padding: 1rem;
   }
+ 
   /*TO ADD BACKGROUND TO DROPDOWNS OF CLIENT AND OUR TEAM*/
   .navbar .dropdown  .dropdown-menu.show {
    
