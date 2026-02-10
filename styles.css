@@ -18,6 +18,9 @@ html, body {
   min-height: 100%;
   margin: 0;
 }
+p{
+	font-family: 'Montserrat'
+}
 .video-overlay {
   position: fixed;
   inset: 0;
@@ -1190,6 +1193,20 @@ footer {
   }
 
   
+}
+/*ABOUT PAGE STYLE*/
+.custom-about-text
+{
+	font-size:1rem;
+	line-height:2rem;
+}
+.custom-margin
+{
+	margin-bottom:30px;
+}
+.custom-margin-1
+{
+	margin-bottom:20px;
 }
 
 
