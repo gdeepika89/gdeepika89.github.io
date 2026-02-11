@@ -65,7 +65,7 @@ p{
 }
 /*VEDIO BACKGROUND FOR HOME PAGE*/
 .home-page-vedio{
-	background-image: url("2.png"); /* fallback image */
+	background-image: url("fallback_image.png"); /* fallback image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
