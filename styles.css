@@ -995,9 +995,11 @@ footer {
 /*css for About page*/
 /* HERO BACKGROUND */
 .special-text{
-	color:#2E2E66;
+	/*color:#2E2E66;*/
+	color:#8080c6;
 }
 .hero {
+	position: relative; 
   min-height: calc(100vh - 80px); /* navbar height */
   /*min-height: 100vh;*/
    max-height: 85vh;
@@ -1042,7 +1044,8 @@ footer {
 
 /* BUTTON */
 .hero-btn {
-  background-color: #2E2E66;
+ /* background-color: #2E2E66;*/
+   background-color:#e9e9f5;
   color: #fff;
   padding: 16px 52px;
   border-radius: 6px;
