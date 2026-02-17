@@ -1045,7 +1045,7 @@ footer {
 /* BUTTON */
 .hero-btn {
  /* background-color: #2E2E66;*/
-   background-color:#8080c6;
+   background-color:#3A3A7A;
   color: #fff;
   padding: 16px 52px;
   border-radius: 6px;
@@ -1054,7 +1054,8 @@ footer {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .hero-btn:hover {
-  background-color: #3A3A7A; /* one shade lighter */
+  /*background-color: #3A3A7A; /* one shade lighter */
+  background-color:#4A4A96;
   transform: translateY(-2px); /* tiny lift */
 }
 /* Active (click) */
@@ -1191,7 +1192,7 @@ footer {
 	align-items: flex-start;
     display: block;          /* important */
   }
-
+/*BELOW TWO STYLES NOT USED*/
   .hero-bottom-image {
     display: block;
     width: 100%;
