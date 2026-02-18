@@ -1052,6 +1052,7 @@ footer {
   border: none;
   letter-spacing: 0.08em;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom:20px;
 }
 .hero-btn:hover {
   /*background-color: #3A3A7A; /* one shade lighter */
@@ -1203,9 +1204,7 @@ footer {
     display: block;
     object-fit: cover;
   }
-  .hero-btn:{
-	  margin-bottom:20px;
-  }
+  
 
   
 }
