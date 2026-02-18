@@ -1203,6 +1203,9 @@ footer {
     display: block;
     object-fit: cover;
   }
+  .hero-btn:{
+	  margin-bottom:20px;
+  }
 
   
 }
