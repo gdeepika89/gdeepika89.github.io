@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VP Informatics - New Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="preload" as="image" href="Untitled-2.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class=" d-flex flex-column min-vh-100 ">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand me-4 logo-animate" href="#">
+        <img src="blue_vpi.png" alt="VP Informatics" height="70">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
+        <ul class="navbar-nav mx-auto gap-4">
+          <li class="nav-item"><a class="nav-link" href="Index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services1.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="About1.html">ABOUT</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">CLIENTS</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Clients</a></li>
+              <li><a class="dropdown-item" href="#">Case Studies</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">OUR TEAM</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Approach</a></li>
+              <li><a class="dropdown-item" href="#">People</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+ <!-- HERO SECTION -->
+ 
+<section class="case-studies-section flex-grow-1 d-flex align-items-center justify-content-center text-center">
+  <div class="hero-content container">
+    <h2 class="section-title text-white slide-in-down">
+  Where Strategy Meets Results
+</h2>
+    <p class="lead fw-bold text-white mt-3 case-studies-text-custom slide-in-down delay-1">
+      Delivering measurable impact through data-driven strategy and scientific expertise.</p>
+<p class="lead fw-bold text-white mt-3 case-studies-text-custom slide-in-down delay-2">Explore how we transform complex challenges into successful outcomes.
+    </p>
+  </div>
+  <a href="#next-section" class="scroll-down-case-studies">
+  <i class="bi bi-chevron-down"></i>
+</a>
+
+</section>
+<section id="next-section" class="case-studies-wrapper py-5">
+  <div class="container-fluid px-5">
+    <div class="row g-5">
+
+      <!-- CASE STUDY 1 -->
+      <div class="col-lg-6 reveal">
+        <div class="case-card">
+          <img src="case_studies_1.JPEG" alt="Case Study 1">
+          <div class="case-overlay">
+            <h3>VP Informatics Powers the Digital Backbone of
+Organic Syntheses, Inc.
+</h3>
+            
+			  <div class="case-arrow" data-target="caseDetails">
+  →
+</div>
+            </div>
+          </div>
+        </div>
+      
+
+      <!-- CASE STUDY 2 -->
+      <div class="col-lg-6 reveal">
+        <div class="case-card">
+          <img src="case-study2 (1).png" alt="Case Study 2">
+          <div class="case-overlay ">
+            <h3>VP Informatics, Inc. Provides QA Solutions
+for a Leading Electronic Lab Notebook Company</h3>
+           
+           
+              
+			  <div class="case-arrow" data-target="caseDetails">
+			   →
+            </div>
+        
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</section>
+
+<section id="caseDetails" class="case-details reveal">
+  <div class="case-content">
+    
+    <div class="case-image">
+      <img src="organic_syntheses.png" alt="Case Study Image">
+    </div>
+
+    <div class="case-text">
+      <h2 class="reveal">VP Informatics Powers the Digital Backbone of Organic Syntheses Inc.</h2>
+    </div>
+
+  </div>
+</section>
+
+
+  <footer class="footer-contact">
+    <div class="container py-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-white">
+        <div class="footer-left">
+          <p class="mb-0">© 2026 VP Informatics, Inc. All rights reserved.</p>
+        </div>
+        <div class="footer-right d-flex align-items-center gap-4">
+          <a href="mailto:info@vpinformatics.com" class="footer-text text-decoration-none ">
+            <i class="bi bi-envelope-fill me-2"></i>
+            info@vpinformatics.com
+          </a>
+          <a href="#" class="footer-text fs-6">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="footer-text fs-5">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  reveals.forEach(reveal => {
+    observer.observe(reveal);
+  });
+</script>
+<script>
+document.querySelectorAll('.case-arrow').forEach(arrow => {
+  arrow.addEventListener('click', function () {
+    const targetId = this.getAttribute('data-target');
+    const section = document.getElementById(targetId);
+
+    // Scroll smoothly
+    section.scrollIntoView({
+      behavior: 'smooth'
+    });
+
+    // Manually trigger reveal (in case observer hasn't yet)
+    section.classList.add('active');
+  });
+});
+</script>
+
+</html>
