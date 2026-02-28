@@ -52,6 +52,33 @@ p{
 .services-page1{
 	background-color:white;
 }
+/*ADD BELOW STYLES FOR MOBILE IMAGE*/
+/* Hide the mobile image by default */
+.mobile-only {
+  display: none;
+}
+  .mobile-only {
+    display: block;
+  }
+  
+  /* On screens smaller than 768px */
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+  .banner-slide img.banner-img {
+	 width: 100%;              /* make image wider */
+  height: 100%; 
+  
+  }
+  .page-banner {
+    min-height: 50vh;
+  }
+}
+/*TILL HERE*/
 
 
 /* Background only for HOME */
@@ -350,7 +377,7 @@ footer {
 
 /* Make images cover the entire banner */
 .banner-slide img.banner-img {
-  width: 120%;              /* make image wider */
+  width: 100%;              /* make image wider */
   height: 100%;
  /* object-fit: cover;*/
   
