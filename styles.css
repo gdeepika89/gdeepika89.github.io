@@ -1692,7 +1692,7 @@ height:auto;
   color:#04384b;
 }
 .orgs-case-details {
-  padding: 100px 20px;
+  padding: 100px 20px 20px 20px;
   background: linear-gradient(
     135deg,
     #ffffff 0%,
