@@ -9,6 +9,9 @@ body {
   min-height: 100vh;
   font-family: 'Merriweather', serif;
 }
+body {
+  overflow-x: hidden; /* Prevents side-scrolling during animations */
+}
 html {
   scroll-behavior: smooth;
 }
@@ -1689,7 +1692,7 @@ height:auto;
   color:#04384b;
 }
 .orgs-case-details {
-  padding: 50px 20px;
+  padding: 100px 20px;
   background: linear-gradient(
     135deg,
     #ffffff 0%,
@@ -1711,7 +1714,7 @@ height:auto;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
 }
 
 .orgs-case-image {
@@ -2275,7 +2278,94 @@ height:auto;
     margin-right: 10px;
     font-size: 1.2rem;
 }
+/* Apply this to any section that is targeted by a scroll link */
+section[id] {
+  scroll-margin-top: 90px; /* Adjust this value to match your header height */
+}
 
+/* Specifically for your reveal sections if they have IDs */
+.orgs-case-details, 
+#next-section, 
+#caseDetails {
+  scroll-margin-top: 100px;
+}
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+  .case-card img {
+    height: 350px; /* Shorter image on mobile */
+  }
+
+  .case-overlay {
+    position: relative; /* Move overlay below image */
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    background: #fff;
+    padding: 25px 15px;
+  }
+
+  .case-overlay h3 {
+    font-size: 1.4rem; /* Smaller text */
+  }
+
+  .case-studies-text-custom {
+    font-size: 1.2rem; /* Hero text adjustment */
+  }
+  
+  .scroll-down-case-studies {
+    bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .orgs-case-extra {
+    padding: 30px 15px; /* Significant reduction for mobile */
+    border-radius: 0; /* Remove radius to maximize space */
+  }
+
+  .orgs-info-box {
+    padding: 20px; /* Less padding inside the blue box */
+  }
+  
+  .orgs-case-top {
+    gap: 20px; /* Tighter gap between image and text */
+	margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .org1-container {
+    padding: 20px 10px; /* Less outer padding */
+  }
+
+  .org1-card {
+    padding: 25px 15px; /* Less inner padding */
+    border-radius: 10px;
+  }
+
+  .org1-main-heading {
+    font-size: 1.6rem;
+  }
+
+  .org1-sub-heading {
+    font-size: 1.3rem;
+    margin: 25px 0 15px 0;
+  }
+}
+@media (max-width: 768px) {
+	.orgs-case-details {
+  padding: 100px 20px 20px 20px;
+  
+}
+.orgs-alt-row {
+  
+  margin-bottom: 50px;
+}
+}
+@media (max-width: 768px) {
+  .orgs-slide-heading, .slide-heading {
+    transform: translateX(-20px); /* Smaller movement for small screens */
+  }
+}
 
 /* Bounce animation */
 @keyframes bounce {
