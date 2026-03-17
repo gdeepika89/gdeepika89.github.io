@@ -2379,12 +2379,143 @@ section[id] {
     transform: translate(-50%, -5px);
   }
 }
+/* Container and Section */
+.cs2-middle-section { padding: 60px 20px; background-color: #f9f9f9; }
+.cs2-container { max-width: 1100px; margin: 0 auto; }
 
+/* Hero Section */
+.cs2-hero-area { text-align: center; margin-bottom: 60px; }
+/*.cs2-hero-placeholder { width: 100%; height: 350px; background: #e0e0e0; margin-bottom: 20px; border-radius: 8px; }*/
+.cs2-hero-placeholder img { 
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 40px; 
+    border-radius: 12px; 
+    /*overflow: hidden; /* Keeps the zoom effect inside the rounded corners */
+    background-color: #f0f0f0;
+}
+.cs2-main-title { color: #04384b; font-size: 2.5rem; }
 
+/* Grid Layout */
+.cs2-features-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px; 
+}
 
+/* Feature Cards */
+.cs2-feature-card { 
+  background: white; 
+  padding: 25px; 
+  border-top: 5px solid #04384b; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.cs2-feature-card:hover { transform: translateY(-5px); }
+.cs2-img-placeholder { width: 100%; height: 180px; background: #eee; margin-bottom: 20px; border-radius: 4px; }
+.cs2-feature-title { color: #04384b; margin-bottom: 10px; }
+/* In a Nutshell Styles */
+.cs2-nutshell-container { 
+  margin-top: 60px; 
+  padding: 40px; 
+  background-color: #ffffff; 
+  border-left: 8px solid #04384b; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
 
+.cs2-nutshell-title { color: #04384b; margin-top: 0; }
+.cs2-nutshell-text { line-height: 1.6; color: #333; font-size: 1.1rem; }
 
+/* Call to Action Styles */
+.cs2-cta-area { margin-top: 30px; text-align: center; }
+.cs2-cta-text { font-weight: bold; margin-bottom: 15px; }
+.cs2-cta-button { 
+  display: inline-block; 
+  padding: 12px 25px; 
+  background-color: #04384b; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.cs2-cta-button:hover { background-color: #065470; }
+.cs2-content-container { 
+  max-width: 800px; 
+  margin: 0 auto 60px auto; 
+  padding: 0 20px; 
+  line-height: 1.8; 
+  color: #333; 
+}
 
+.cs2-section-title { 
+  color: #04384b; 
+  margin-top: 40px; 
+  border-bottom: 2px solid #04384b; 
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
+.cs2-text { 
+  font-size: 1.1rem; 
+  margin-bottom: 20px; 
+}
+.cs2-spotlight-box { 
+  background-color: #eaf2f5; 
+  padding: 30px; 
+  border-left: 5px solid #04384b; 
+  margin: 30px 0; 
+  border-radius: 0 8px 8px 0;
+}
 
+.cs2-spotlight-box h3 { 
+  color: #04384b; 
+  margin-top: 0; 
+}
+/* The Parent Flex Container */
+.cs2-hero-flex {
+    display: flex;
+    align-items: center; /* Vertically centers the text and image */
+    justify-content: space-between; /* Spreads them to the edges */
+    gap: 40px; /* Space between the image and the text */
+    margin-bottom: 60px;
+    flex-wrap: wrap; /* Important: allows stacking on mobile phones */
+}
+
+/* Adjusting the Image Container for Side-by-Side */
+.cs2-hero-placeholder {
+    flex: 1; /* Allows the image to take up proportional space */
+    min-width: 300px; /* Prevents it from getting too small */
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cs2-hero-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adjusting the Title for Side-by-Side */
+.cs2-main-title {
+    flex: 1; /* Allows the text to take up the other half of the space */
+    color: #04384b;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    text-align: left; /* Changed from center to left for side-by-side look */
+    margin: 0;
+}
+
+/* Responsive Mobile Tweak */
+@media (max-width: 768px) {
+    .cs2-hero-flex {
+        flex-direction: column; /* Stacks image on top of text for mobile */
+        text-align: center;
+    }
+    .cs2-main-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
 
