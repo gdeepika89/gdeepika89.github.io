@@ -2412,7 +2412,15 @@ section[id] {
   transition: transform 0.3s ease;
 }
 .cs2-feature-card:hover { transform: translateY(-5px); }
-.cs2-img-placeholder { width: 100%; height: 180px; background: #eee; margin-bottom: 20px; border-radius: 4px; }
+/*.cs2-img-placeholder { width: 100%; height: 180px; background: #eee; margin-bottom: 20px; border-radius: 4px; }*/
+.cs2-img-placeholder img{
+	width: 100%; 
+    height: 180px; 
+    margin-bottom: 20px; 
+    border-radius: 4px; 
+    /*overflow: hidden; /* Keeps the zoom effect inside the rounded corners */
+    background-color: #f0f0f0;
+}
 .cs2-feature-title { color: #04384b; margin-bottom: 10px; }
 /* In a Nutshell Styles */
 .cs2-nutshell-container { 
