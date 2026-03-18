@@ -530,17 +530,27 @@ footer {
   position: relative;
 }
 
+
+.testimonial-card {
+  position: relative;
+  padding: 45px 25px 30px; /* more space at top */
+}
+.testimonial-card p {
+  margin-top: 15px;
+}
+
 /* Quote icon */
 .testimonial-card::before {
   content: "“";
   font-size: 4rem;
   color: #d4af37; /* golden */
   position: absolute;
-  top: 10px;
-  left: 18px;
-  opacity: 0.4;
+  top: 5px;
+  left: 15px;
+  opacity: 0.25;
+  line-height: 1;
+  pointer-events: none;
 }
-
 .testimonial-text {
   font-size: 1rem;
   color: #2E2E66;
