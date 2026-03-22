@@ -2791,7 +2791,7 @@ button:disabled {
   height: 85vh; /* Covers entire viewport */
   width: 100%;
   overflow: hidden;
-  background:linear-gradient(rgba(4, 56, 75, 0.9), rgba(4, 56, 75, 0.9)),url('Images\Contact\Contact.jpg') no-repeat center center/cover;;
+  background:linear-gradient(rgba(4, 56, 75, 0.9), rgba(4, 56, 75, 0.9)),url('Images/Contact/contact.jpg') no-repeat center center/cover;
 }
 
 /* LEFT SIDE: Full Cover Image */
@@ -2837,7 +2837,7 @@ button:disabled {
   flex: 1; /* Takes other 50% */
   /*flex: 0 0 40%;*/
   background: linear-gradient(rgba(4, 56, 75, 0.9), rgba(4, 56, 75, 0.9))/*, 
-              url('Contact.jpg');  Your contact background image */
+              url('contact.jpg');  Your contact background image */
   background-size: cover;
   background-position: center;
   display: flex;
