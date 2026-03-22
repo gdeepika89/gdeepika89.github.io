@@ -41,7 +41,7 @@ p{
 }
 
 
-
+/*NOT USED*/
 .services-page {
 	
   background-image: url('Website Main.png');
@@ -51,15 +51,16 @@ p{
   background-position: center;
   background-repeat: no-repeat;
 }
+/************/
 
 .services-page1{
 	background-color:white;
 }
 /*ADD BELOW STYLES FOR MOBILE IMAGE*/
 /* Hide the mobile image by default */
-.mobile-only {
+/*.mobile-only {
   display: none;
-}
+}NEED TO CHECK*/
   .mobile-only {
     display: block;
   }
@@ -86,22 +87,22 @@ p{
 
 /* Background only for HOME */
 /*NOT USED ANYWHERE*/
-.home-page {
+/*.home-page {
   background-image: url('2.png');
   background-size: cover;
   
   background-position: center;
   background-repeat: no-repeat;
-}
+}*/
 /*VEDIO BACKGROUND FOR HOME PAGE*/
-.home-page-vedio{
-	background-image: url("fallback_image.png"); /* fallback image */
+/*.home-page-vedio{
+	
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  /*overflow: hidden;*/
-}
+  
+}*/
 /* Video background */
 .bg-video {
   position: fixed;          /* important */
@@ -491,6 +492,12 @@ footer {
     transform 0.25s ease,
     border-color 0.3s ease;
 }
+/*NEED TO CHECK CAN COMBINE TWO CUSTOM-IMG-BTN*/
+.custom-img-btn {
+  opacity: 0;
+  animation: buttonFadeIn 0.6s ease forwards;
+  animation-delay: 1.1s;
+}
 .custom-img-btn:hover {
   
  background-color: #ffffff;
@@ -521,7 +528,7 @@ footer {
     0 10px 24px rgba(0, 0, 0, 0.25);
 }
 /*testimonials*/
-.testimonial-card {
+/*.testimonial-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   padding: 28px;
@@ -533,17 +540,17 @@ footer {
 
 .testimonial-card {
   position: relative;
-  padding: 45px 25px 30px; /* more space at top */
+  padding: 45px 25px 30px; 
 }
 .testimonial-card p {
   margin-top: 15px;
 }
 
-/* Quote icon */
+
 .testimonial-card::before {
   content: "“";
   font-size: 4rem;
-  color: #d4af37; /* golden */
+  color: #d4af37; 
   position: absolute;
   top: 5px;
   left: 15px;
@@ -582,6 +589,7 @@ footer {
   transform: translateY(-6px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
 }
+*/
 
 /* Initial hidden state */
 .vs-slide-right,
@@ -622,7 +630,7 @@ footer {
 }
 
 
-.blinds-wrapper {
+/*.blinds-wrapper {
   overflow: hidden;
 }
 
@@ -643,13 +651,13 @@ footer {
   animation: blindsOpen 0.8s ease forwards;
 }
 
-/* Stagger effect */
+
 .blinds-animate .blinds span:nth-child(1) { animation-delay: 0.1s; }
 .blinds-animate .blinds span:nth-child(2) { animation-delay: 0.2s; }
 .blinds-animate .blinds span:nth-child(3) { animation-delay: 0.3s; }
 .blinds-animate .blinds span:nth-child(4) { animation-delay: 0.4s; }
 .blinds-animate .blinds span:nth-child(5) { animation-delay: 0.5s; }
-
+*/
 @keyframes blindsOpen {
   from {
     transform: translateY(0);
@@ -659,11 +667,7 @@ footer {
   }
 }
 
-.custom-img-btn {
-  opacity: 0;
-  animation: buttonFadeIn 0.6s ease forwards;
-  animation-delay: 1.1s;
-}
+
 .content-bg{
 	background-color:#00517f;
 	color:#fff;
@@ -1043,7 +1047,7 @@ footer {
   min-height: calc(100vh - 80px); /* navbar height */
   /*min-height: 100vh;*/
    max-height: 85vh;
-  background-image: url("About_bg_latest.jpeg");
+  background-image: url("Images/About/About_bg_latest.jpeg");
   background-size: cover;
   background-position:bottom center;
   background-repeat: no-repeat;
@@ -1224,7 +1228,7 @@ footer {
     min-height: auto;
     max-height: none;
 
-    background-image: url("about_bg_mobile.png");
+    background-image: url("Images/About/about_bg_mobile.png");
     background-position: center top;
     background-size: cover;
 
@@ -1431,7 +1435,7 @@ height:auto;
 /*CASE_STUDIES*/
 .case-studies-section {
   position: relative;
-  background: url("case_studies_bg.jpeg") center/cover no-repeat;
+  background: url("Images/Case_studies/case_studies_bg.jpeg") center/cover no-repeat;
   min-height: 90vh;   /* 👈 This is important */
   overflow: hidden;
 }
@@ -2538,34 +2542,51 @@ section[id] {
 }
 /*CONTACT US*/
 
-
+.image-card {
+  padding: 0; /* remove padding for image */
+  overflow: hidden;
+}
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
 .contact-section {
   display: flex;
   min-height: 80vh;
 }
+.contact-section {
+  display: flex;
+  min-height: 90vh;
 
+  background: url("Contact.png") no-repeat center center/cover;
+}
 /* LEFT SIDE */
 .left-panel {
   width: 50%;
   background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+ 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+
 .content-wrapper {
   text-align: center;
   max-width: 400px;
   transition: opacity 0.5s ease;
+  
 }
 
-.left-panel img {
-  width: 100%;
-  height: 260px;
+/*.left-panel img {
+  width: 130%;
+  height: 400px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+}*/
 
 #dynamic-text {
   margin-top: 20px;
@@ -2586,7 +2607,7 @@ section[id] {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+ /* background: #ffffff;*/
 }
 
 .form-card {
@@ -2756,4 +2777,343 @@ button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
+/*CONTACT NEW STYLES */
 
+/* Reset and Base */
+.main-middle-contact {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.split-screen-contact {
+  display: flex;
+  height: 85vh; /* Covers entire viewport */
+  width: 100%;
+  overflow: hidden;
+  background:linear-gradient(rgba(4, 56, 75, 0.9), rgba(4, 56, 75, 0.9)),url('Images\Contact\Contact.jpg') no-repeat center center/cover;;
+}
+
+/* LEFT SIDE: Full Cover Image */
+.left-side-contact {
+  flex: 1; /* Takes exactly 50% */
+  /*flex: 0 0 40%;*/
+  position: relative;
+  height: 100%;
+}
+
+/****************************************/
+.image-slider-contact {
+  position: relative;
+  width: 100%; /* The container fills the 50% column */
+  height: 100%; /* Fills the 85vh */
+  overflow: hidden;
+}
+
+.slide-contact {
+  position: absolute;
+  /* 4. Your 80% Width Choice */
+  width: 80%; 
+  height: 100%;
+  
+  /* 5. The "No-Cut" Rule */
+ /* object-fit: contain; */
+  
+  /* 6. Centering the 80% image inside the 100% container */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide-contact.active {
+  opacity: 1;
+}
+/********************/
+/* RIGHT SIDE: Form with Background Image */
+.right-side-contact {
+  flex: 1; /* Takes other 50% */
+  /*flex: 0 0 40%;*/
+  background: linear-gradient(rgba(4, 56, 75, 0.9), rgba(4, 56, 75, 0.9))/*, 
+              url('Contact.jpg');  Your contact background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-container-contact {
+  width: 100%;
+  max-width: 500px;
+  color: white;
+}
+
+.form-title-contact {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00d4ff;
+  display: inline-block;
+}
+
+/* Form Styling */
+.form-row-contact { display: flex; gap: 20px; margin-bottom: 15px; }
+.input-group-contact { margin-bottom: 20px; flex: 1; }
+.input-group-contact label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 0.9rem; }
+.input-group-contact input, .input-group-contact textarea {
+  width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1); color: white;
+}
+.input-group-contact textarea { height: 100px; resize: none; }
+
+.submit-btn-contact {
+  width: 100%; padding: 15px; background: #00d4ff; color: #04384b;
+  border: none; border-radius: 4px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+
+.submit-btn-contact:hover { background: white; }
+
+/* THE FLICKERING JUMP BUTTON */
+.jump-btn-contact {
+  margin-top: 30px; width: 100%; padding: 12px; background: transparent;
+  color: white; border: 1px solid #00d4ff; border-radius: 4px; cursor: pointer;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+
+.flicker-animation-contact {
+  animation: flicker-glow 3s infinite;
+}
+
+@keyframes flicker-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.7); border-color: #00d4ff; }
+}
+
+/* Testimonials */
+/* Testimonials Section Styling */
+.testimonials-section-contact {
+  padding: 100px 0;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.testi-header-wrapper-contact {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testi-header-contact {
+  color: #04384b; /* Your primary color */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.testi-subheader-contact {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* FLEXIBLE GRID: This handles adding more items automatically */
+.testi-grid-contact {
+  display: grid;
+  /* This line says: create columns at least 350px wide, but fill the space */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Modern Card Design */
+.testi-card-contact {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  border: 1px solid #edf2f7;
+}
+
+.testi-card-contact:hover {
+  transform: translateY(-10px); /* Lifts the card on hover */
+  box-shadow: 0 20px 40px rgba(4, 56, 75, 0.1);
+  border-color: #04384b;
+}
+
+.testi-icon-contact {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 4rem;
+  color: #04384b;
+  opacity: 0.1;
+  font-family: serif;
+}
+
+.testi-rating-contact {
+  color: #fbbf24; /* Gold stars */
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.testi-text-contact {
+  color: #334155;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.testi-footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testi-avatar-contact {
+  width: 45px;
+  height: 45px;
+  background: #04384b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.testi-cite-contact {
+  font-weight: 700;
+  color: #04384b;
+  font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testi-grid-contact {
+    grid-template-columns: 1fr; /* One column on phones */
+  }
+}
+@media screen and (max-width: 1100px) {
+	.slide-contact {
+	
+  position: absolute;
+  /* 4. Your 80% Width Choice */
+  width: 100%; 
+  height: 100%;
+  
+  /* 5. The "No-Cut" Rule */
+ /* object-fit: contain; */
+  
+  /* 6. Centering the 80% image inside the 100% container */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+	
+}
+/* --- RESPONSIVE LOGIC (900px and below) --- */
+@media screen and (max-width: 700px) {
+  
+  /* 1. Stack the Hero Sections */
+  .split-screen-contact {
+    flex-direction: column;
+    height: auto; /* Allow the page to grow vertically */
+    overflow: visible;
+  }
+
+  .left-side-contact, 
+  .right-side-contact {
+    flex: none;
+    width: 100%;
+  }
+
+  /* 2. Fix the Image Slider for Mobile */
+  .left-side-contact {
+	 
+    height: 60vh; /* Don't take full screen on mobile, just enough for impact */
+    min-height: 400px;
+	
+  }
+  
+
+  .image-slider-contact {
+    height: 100%;
+    width: 100%;
+  }
+  
+/* Optional: Intensify glow on hover */
+.image-slider-contact:hover {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+}
+.slide-contact {
+	
+  position: absolute;
+  /* 4. Your 80% Width Choice */
+  width: 100%; 
+  height: 100%;
+  
+  /* 5. The "No-Cut" Rule */
+ /* object-fit: contain; */
+  
+  /* 6. Centering the 80% image inside the 100% container */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+  /* 3. Adjust the Form Section */
+  .right-side-contact {
+    padding: 60px 20px;
+    height: auto;
+  }
+
+  .form-container-contact {
+    max-width: 100%;
+  }
+
+  .form-title-contact {
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto 30px;
+  }
+
+  /* 4. Handle Form Row (Stack Name/Email) */
+  .form-row-contact {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* 5. Testimonial Grid Adjustments */
+  .testi-grid-contact {
+    grid-template-columns: 1fr; /* Strictly one column on smaller screens */
+    padding: 0 10px;
+  }
+  
+  .testi-header-contact {
+    font-size: 1.8rem;
+  }
+}
+
+/* Specific fix for very small phones */
+@media screen and (max-width: 480px) {
+  .left-side-contact {
+    height: 40vh; /* Smaller image on small phones */
+  }
+  
+  .submit-btn-contact, .jump-btn-contact {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
