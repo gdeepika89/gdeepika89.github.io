@@ -2918,6 +2918,7 @@ button:disabled {
 
 /* FLEXIBLE GRID: This handles adding more items automatically */
 .testi-grid-contact {
+  width: 90%; /* Default width for small screens */
   display: grid;
   /* This line says: create columns at least 350px wide, but fill the space */
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
