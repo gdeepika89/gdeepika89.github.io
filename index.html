@@ -25,7 +25,7 @@
 <body  class="home-page-video d-flex flex-column min-vh-100">
 
 
- <video autoplay muted loop playsinline class="bg-video">
+ <video autoplay muted loop playsinline webkit-playsinline preload="auto" class="bg-video">
     <source src="Images/Home_page_video.mp4" type="video/mp4" />
   </video>
   <div class="video-overlay"></div>
@@ -135,9 +135,9 @@
 
         <!-- SOCIAL ICONS -->
 
-        <a href="#" class="footer-text fs-5">
-          <i class="bi bi-linkedin"></i>
-        </a>
+        <a href="https://www.linkedin.com/company/vp-informatics-inc/" target="_blank" rel="noopener noreferrer" class="footer-text fs-5">
+		  <i class="bi bi-linkedin"></i>
+		</a>
 
       </div>
 
@@ -148,4 +148,26 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('.bg-video');
+    if (video) {
+      // Ensure video properties are locked programmatically
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+
+      // Force play promise
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Fallback: If browser blocks auto-play, trigger play on first user touch anywhere
+          document.addEventListener('touchstart', () => {
+            video.play();
+          }, { once: true });
+        });
+      }
+    }
+  });
+</script>
 </body>
