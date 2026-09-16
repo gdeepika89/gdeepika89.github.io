@@ -1760,7 +1760,12 @@ section[id] {
 /*MEDIA QUERIES*/
 /*INDEX PAGE*/
 /*TO ADD A BACKGROUND TO THE MOBILE NAV MENU ITEMS*/
+
 @media (max-width: 991.98px) {
+	/* Prevent closed dropdowns from reserving height/space in mobile menu */
+  .navbar-nav .dropdown-menu:not(.show) {
+    display: none !important;
+  }
   .navbar-collapse.show {
     /*background-color: rgba(255, 255, 255, 0.18);*/
 	/*background-color: #04384b; */
@@ -1779,29 +1784,7 @@ section[id] {
   }
   
 }
-@media (max-width: 991.98px) {
-  .navbar-collapse.show {
-    background-color: rgba(4, 56, 75, 0.2);
-    backdrop-filter: blur(8px);
-    border-radius: 8px;
-    padding: 1rem;
-  }
-  
-  /* Reset dropdown layout on mobile to prevent layout gaps */
-  .navbar .dropdown .dropdown-menu {
-    position: static;
-    float: none;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent; /* Allows parent glassmorphism to show through */
-  }
 
-  .navbar .dropdown .dropdown-menu.show {
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
-  }
-}
 /***********INDEX***********/
 /*SERVICES*/
   /* On screens smaller than 768px FOR services page*/
